@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.messagerie_association.MessagerieController"
+            prefHeight="740.0" prefWidth="940.0" styleClass="root">
+    <padding><Insets bottom="16" left="20" right="20" top="16" /></padding>
+    <children>
+        <!-- En-tête -->
+        <Label fx:id="label_connecte" layoutX="20.0" layoutY="18.0" styleClass="label-info" style="-fx-font-size: 15px;" />
+        <Button fx:id="btn_liste_membres" layoutX="680.0" layoutY="12.0" onAction="#ouvrirListeMembres" styleClass="bouton-secondaire" prefHeight="36.0" prefWidth="130.0" text="Liste des membres" />
+        <Button fx:id="btn_deconnexion" layoutX="820.0" layoutY="12.0" onAction="#deconnexion" styleClass="bouton-danger" prefHeight="36.0" prefWidth="100.0" text="Déconnexion" />
+
+        <Text layoutX="20.0" layoutY="58.0" styleClass="titre-principal" text="Messagerie">
+            <font><Font size="24.0" /></font>
+        </Text>
+
+        <!-- Membres connectés -->
+        <Text layoutX="20.0" layoutY="92.0" styleClass="titre-section" text="Membres connectés" />
+        <ListView fx:id="list_membres_connectes" layoutX="20.0" layoutY="100.0" prefHeight="130.0" prefWidth="280.0" styleClass="list-view" />
+
+        <!-- Envoyer un message -->
+        <Text layoutX="20.0" layoutY="252.0" styleClass="titre-section" text="Envoyer un message" />
+        <Label layoutX="20.0" layoutY="268.0" text="Destinataire" styleClass="label" />
+        <ComboBox fx:id="combo_destinataire" layoutX="20.0" layoutY="286.0" prefHeight="34.0" prefWidth="320.0" styleClass="combo-box" promptText="Choisir un destinataire" />
+        <Label layoutX="20.0" layoutY="328.0" text="Message" styleClass="label" />
+        <TextArea fx:id="ta_contenu" layoutX="20.0" layoutY="346.0" prefHeight="85.0" prefWidth="560.0" styleClass="text-area" promptText="Écrivez votre message..." wrapText="true" />
+        <Button fx:id="btn_envoyer" layoutX="590.0" layoutY="346.0" onAction="#envoyerMessage" styleClass="bouton-principal" prefHeight="40.0" prefWidth="130.0" text="Envoyer" />
+
+        <!-- Historique -->
+        <Text layoutX="20.0" layoutY="454.0" styleClass="titre-section" text="Historique des messages" />
+        <TextField fx:id="tf_recherche_message" layoutX="20.0" layoutY="472.0" prefHeight="32.0" prefWidth="380.0" styleClass="text-field" promptText="Rechercher dans les messages..." />
+        <TableView fx:id="tab_messages" layoutX="20.0" layoutY="508.0" prefHeight="212.0" prefWidth="900.0" styleClass="table-view">
+            <columns>
+                <TableColumn fx:id="col_msg_id" prefWidth="50.0" text="ID" />
+                <TableColumn fx:id="col_msg_contenu" prefWidth="300.0" text="Contenu" />
+                <TableColumn fx:id="col_msg_exp" prefWidth="120.0" text="Expéditeur" />
+                <TableColumn fx:id="col_msg_dest" prefWidth="120.0" text="Destinataire" />
+                <TableColumn fx:id="col_msg_date" prefWidth="130.0" text="Date" />
+                <TableColumn fx:id="col_msg_statut" prefWidth="80.0" text="Statut" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

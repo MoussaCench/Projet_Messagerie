@@ -1,0 +1,155 @@
+/* ===== Messagerie Association - Thème global ===== */
+
+.root {
+    -fx-font-family: "Segoe UI", "System", sans-serif;
+    -fx-font-size: 14px;
+    -fx-background-color: #f5f6fa;
+}
+
+/* Titres */
+.titre-principal {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-fill: #2c3e50;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 2, 0, 0, 1);
+}
+
+.titre-section {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #34495e;
+}
+
+/* Champs de saisie */
+.text-field, .password-field {
+    -fx-pref-height: 34px;
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6px;
+    -fx-padding: 6 12;
+    -fx-font-size: 14px;
+}
+
+.text-field:focused, .password-field:focused {
+    -fx-border-color: #3498db;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.3), 4, 0, 0, 0);
+}
+
+.text-area {
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+    -fx-border-color: #bdc3c7;
+    -fx-border-radius: 6px;
+    -fx-padding: 8 12;
+    -fx-font-size: 14px;
+    -fx-wrap-text: true;
+}
+
+.text-area:focused {
+    -fx-border-color: #3498db;
+}
+
+/* Boutons */
+.bouton-principal {
+    -fx-pref-height: 38px;
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.bouton-principal:hover {
+    -fx-background-color: #2980b9;
+    -fx-effect: dropshadow(gaussian, rgba(52, 152, 219, 0.4), 6, 0, 0, 2);
+}
+
+.bouton-succes {
+    -fx-background-color: #27ae60;
+    -fx-text-fill: white;
+}
+
+.bouton-succes:hover {
+    -fx-background-color: #219a52;
+}
+
+.bouton-danger {
+    -fx-background-color: #e74c3c;
+    -fx-text-fill: white;
+}
+
+.bouton-danger:hover {
+    -fx-background-color: #c0392b;
+}
+
+.bouton-secondaire {
+    -fx-background-color: #95a5a6;
+    -fx-text-fill: white;
+}
+
+.bouton-secondaire:hover {
+    -fx-background-color: #7f8c8d;
+}
+
+/* Panneaux / cartes */
+.panneau {
+    -fx-background-color: white;
+    -fx-background-radius: 10px;
+    -fx-border-color: #ecf0f1;
+    -fx-border-radius: 10px;
+    -fx-padding: 16;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 8, 0, 0, 2);
+}
+
+/* TableView */
+.table-view {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #ecf0f1;
+    -fx-border-radius: 8px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #ecf0f1;
+    -fx-padding: 10 8;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #fafafa;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #d6eaf8;
+}
+
+/* ListView */
+.list-view {
+    -fx-background-color: white;
+    -fx-background-radius: 8px;
+    -fx-border-color: #ecf0f1;
+}
+
+/* ComboBox */
+.combo-box {
+    -fx-pref-height: 34px;
+    -fx-background-color: white;
+    -fx-background-radius: 6px;
+}
+
+/* Labels */
+.label {
+    -fx-text-fill: #2c3e50;
+}
+
+.label-erreur {
+    -fx-text-fill: #e74c3c;
+    -fx-font-size: 13px;
+    -fx-wrap-text: true;
+}
+
+.label-info {
+    -fx-text-fill: #3498db;
+    -fx-font-weight: bold;
+}
