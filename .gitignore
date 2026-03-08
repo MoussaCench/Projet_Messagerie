@@ -1,0 +1,27 @@
+# ============================================================
+# GITIGNORE POUR LE DEV "RESTE DU CODE" (backend / serveur)
+# Copie ce fichier en .gitignore pour ne pousser QUE le code backend.
+# Tu ne pousseras pas les vues/contrôleurs interface (rôle de l'autre).
+# ============================================================
+
+# Build / IDE
+target/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.class
+.DS_Store
+
+# --- INTERFACE : ne pas inclure dans tes commits (rôle de l'autre dev) ---
+**/connexion-view.fxml
+**/inscription-view.fxml
+**/messagerie-view.fxml
+**/liste-membres-view.fxml
+**/styles.css
+**/ConnexionController.java
+**/InscriptionController.java
+**/MessagerieController.java
+**/ListeMembresController.java
+**/util/AlertHelper.java
